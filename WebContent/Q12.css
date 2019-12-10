@@ -1,0 +1,15 @@
+h1{
+	color:green;
+}
+#para_id{
+	color:red;
+}
+.para_class{
+	text-align:center;
+}
+img{
+  background-color:lightgrey;
+  border:15px solid green;
+  padding:20px;
+  margin:10px;
+}

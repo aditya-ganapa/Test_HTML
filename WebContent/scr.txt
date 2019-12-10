@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+  label {
+	 float: left;
+	 width:100px;
+}
+input {
+	width:120px;
+	margin-bottom: 3px;
+}
+
+input[type='submit']{
+	width:100px;
+}
+input[type='radio']{
+	width:30px;
+}
+
+input[type='reset']{
+	width:100px;
+}
+
+form{
+ margin-left: 300px;
+ margin-top: 100px;
+ border: inset red 20px;
+ width: 30%;
+ padding: 20px; 
+}
+
+</style>
+<script type="text/javascript">
+ function validate(){
+	 var id=document.getElementById("id").value
+	 var name=document.getElementById("name").value
+	 var gender=document.getElementsByName("gender")
+	
+	 gender_status=false;
+	 
+	 for (var int = 0; int < gender.length; int++) {
+	  if(gender[int].checked)		  {
+		    gender_status=true;
+		    break;
+		  }
+	}
+	 
+	 
+	 if(id=="")	{
+		 alert("id is blank")
+		 return false;
+	 }
+	 
+	 else if(isNaN(id))	{
+		 alert("enter numeric value for id ")
+		 return false;
+	 }
+	 
+	 else if(name=="")	{
+		 alert("name is blank")
+		 return false;
+	 }
+	 else if(name.length<5)	{
+		 alert("name length can not be less tha 5 chars")
+		 return false;
+	 }
+	 
+	 else if(gender_status==false)	{
+		 alert("select the gender")
+		 return false;
+	 }
+	 
+	 else{
+		 return true;
+	 }
+	 
+ }
+
+
+</script>
+
+</head>
+<body>
+
+<form action="action1" onsubmit="return validate()">
+
+<label>Enter Id</label>
+<input id="id" name="id"><br>
+
+<label>Enter Name</label>
+<input id="name" name="name"><br>
+
+
+<label>Gender</label>
+<input id="gender" type="radio" name="gender" value="male">Male
+<input id="gender" type="radio" name="gender" value="female">Female
+<br>
+<input type="submit" value="Login">
+<input type="reset" value="Cancel">
+
+</form>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+sum=0;
+
+for (var x = 1; x <=10; x++) {
+ sum=sum+x;	
+}
+alert("sum  is "+sum)
+
+
+</script>
+
+ 
+</head>
+<body>
+
+</body>
+</html>
